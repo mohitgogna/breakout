@@ -122,7 +122,16 @@ function drawLives() {
 }
 
 function draw() {
-	
+
+	console.log("x="+x
+	+" | y="+y
+	+" | dx="+dx
+	+" | dy="+dy
+	+" | paddleX="+paddleX
+	+" | paddleWidth="+paddleWidth
+	+" | canvas.height="+canvas.height
+	+" | ballRadius="+ballRadius);	
+
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   
   drawBricks();
@@ -138,7 +147,7 @@ function draw() {
   if(y + dy < ballRadius) {
     dy = -dy;
   }
-  else if(y + dy > canvas.height-ballRadius) {
+  else if(y + dy > canvas.height-ballRadius - paddleHeight) {
     if(x > paddleX && x < paddleX + paddleWidth) {
       dy = -dy;
     }
