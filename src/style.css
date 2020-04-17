@@ -1,1 +1,9 @@
-canvas { background: #eee; }
+body {
+    background-color: cornsilk;
+}
+
+canvas { background: white; }
+
+.main {
+    text-align: center;
+}
